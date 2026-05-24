@@ -27,6 +27,7 @@ RUN apt-get update \
     libxdamage1 \
     libxext6 \
     libxfixes3 \
+    libxkbcommon0 \
     libxrandr2 \
     xdg-utils \
   && rm -rf /var/lib/apt/lists/*
