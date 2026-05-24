@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Pull Docker image
-        run: docker pull ghcr.io/keancollyer12/cf-auto-url:sha-85d951a
+        run: docker pull ghcr.io/keancollyer12/cf-auto-url:latest
 
       - name: Run Docker container
-        run: docker run --rm ghcr.io/keancollyer12/cf-auto-url:sha-85d951a "${{ inputs.url }}"
+        run: docker run --rm ghcr.io/keancollyer12/cf-auto-url:latest "${{ inputs.url }}"
