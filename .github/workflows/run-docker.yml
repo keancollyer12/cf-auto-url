@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       url:
-        description: 'sxyprn post URL'
+        description: 'post URL'
         required: true
         type: string
 
