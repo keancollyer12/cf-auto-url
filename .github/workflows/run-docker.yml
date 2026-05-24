@@ -1,0 +1,20 @@
+name: Run Docker with URL
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: 'sxyprn post URL'
+        required: true
+        type: string
+
+jobs:
+  run-docker:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Pull Docker image
+        run: docker pull ghcr.io/norvark12/cf-auto-url:sha-85d951a
+
+      - name: Run Docker container
+        run: docker run --rm ghcr.io/norvark12/cf-auto-url:sha-85d951a "${{ inputs.url }}"
